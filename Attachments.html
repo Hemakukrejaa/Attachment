@@ -1,0 +1,39 @@
+<head>
+ <title>Attachments</title
+</head>
+<body>
+
+  <h1>Attachments</h1>
+{{> attach}}
+
+{{> home}}
+</body>
+
+<template name="attach">
+<table border="2">
+  
+<tr><td><p>Income/Salary Certificate/Letter From Employer</p></td></tr>
+<tr><td><p>Mark Sheets Of All Years</p></td></tr>
+<tr><td><p>Ration Card</p></td></tr>
+<tr><td><p>Aadhar Card</p></td></tr>
+<tr><td><p>Bank Pass Bppk Of parents With Updated Entries</p></td></tr>
+<tr><td><p>PAN Card of Parents/Student</p></td></tr>
+<tr><td><p>Latest Electricity Bill</p></td></tr>
+</table>
+</template>
+
+
+<template name="home">
+<input class="your-upload-class" type="file" multiple>
+
+  <table class="table table-condensed">
+        <tbody>
+        {{#each theFiles}}
+<tr>
+        <td>{{original.name}}</td>uploaded<td><button 
+id="deleteFileButton">delete</button></td>
+ </tr>
+        {{/each}}
+        </tbody>
+      </table>
+  </template>
